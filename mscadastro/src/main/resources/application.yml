@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: mscadastro
+  datasource:
+    url: jdbc:postgresql://localhost:5432/cartao
+    username: postgres
+    password: 123
+
+server:
+  port: 8081
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+instance:
+  instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
