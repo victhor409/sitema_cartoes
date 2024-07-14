@@ -5,7 +5,11 @@ spring:
     url: jdbc:postgresql://localhost:5432/cartao
     username: postgres
     password: 123
-
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
 server:
   port: 8081
 
